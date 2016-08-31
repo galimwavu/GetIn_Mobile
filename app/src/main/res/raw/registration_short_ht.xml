@@ -1,131 +1,108 @@
 <Procedure
-    title="Pasyan Enskripsyon: Kout Fòm"
-    author="Sana"
+    title="Medical Registration Form"
+    author="GetIn"
     uuid="18785afb-6160-45a0-ac8c-1f5cbfaa6d92"
     version="1.0"
     locale="ht"
     object_class="org.sana.core.Subject"
 	on_complete="intent://org.sana.provider/core/procedure/5299055a-c5e6-47e7-b649-dc17dac6019b#Intent;scheme=content;action=org.sana.android.intent.action.RUN_PROCEDURE;type=vnd.android.cursor.item/org.sana.procedure;end">
-    <Page>
-        <Element id="1"
-                 type="RADIO"
-                 concept="ID EXACT"
-                 question="Ou konnen HAS nimewo a pasyan"
-                 choices="wi;non"
-                 required="true"
-                 />
-    </Page>
-    <Page>
-        <ShowIf>
-            <Criteria type="EQUALS"
-                      id="1"
-                      value="wi"
-                />
-        </ShowIf>
-        <Element id="1a"
-                 type="ENTRY"
-                 concept="SYSTEM ID"
-                 question="Antre HAS Nimewo"
-                 required="true"/>
-    </Page>
-    <Page>
-        <ShowIf>
-            <Criteria type="EQUALS"
-                      id="1"
-                      value="wi"
-                />
-        </ShowIf>
-        <Element id="h2a"
-                 type="HIDDEN"
-                 concept="LOCATION"
-                 question="Kote"
-                 default="29da1cb1-a8da-486d-80c8-0fbd4ee3f9ca"/>
-        <Element type="ENTRY" id="2a"
-                 concept="FAMILY NAME"
-                 required="true"
-                 question="Nòm" answer=""/>
-        <Element type="ENTRY" id="3a"
-                 concept="GIVEN NAME"
-                 required="true"
-                 question="Prenom"
-                 answer=""/>
-    </Page>
-    <Page>
-        <ShowIf>
-            <Criteria type="EQUALS"
-                      id="1"
-                      value="non"
-                      />
-        </ShowIf>
-        <Element id="h1b"
-                 type="HIDDEN"
-                 concept="SYSTEM ID"
-                 question="HAS #"
-                 default="U:@DEVICE:@NOW:"/>
-        <Element id="h2b"
-                 type="HIDDEN"
-                 concept="LOCATION"
-                 question="Kote"
-                 default="29da1cb1-a8da-486d-80c8-0fbd4ee3f9ca"/>
-        <Element type="ENTRY" id="2b"
-		   concept="FAMILY NAME"
-		   required="true"
-		   question="Nòm" answer=""/>
-        <Element type="ENTRY" id="3b"
-                 concept="GIVEN NAME"
-                 required="true"
-                 question="Prenom"
-                 answer=""/>
-	</Page>
-	<Page>
-		<Element
-			type="RADIO" id="4"
-			concept="GENDER"
-			question="Sexe"
+      <Page>
+          <Element
+			id="1"
+			concept="CONTRACEPTIVE USE"
+			type="RADIO"
 			required="true"
-            answer=""
-            choices="M;F"
-            values="M;F"
-			/>
-	</Page>
-    <Page>
-        <Element id="5"
-                 type="RADIO"
-                 concept="DOB EXACT"
-                 question="Ou konnen dat pasyan an nan naissance?"
-                 choices="wi;non"
-                 required="true"
-            />
-    </Page>
-    <Page>
-        <ShowIf>
-            <Criteria type="EQUALS" id="5" value="wi"/>
-        </ShowIf>
-        <Element type="DATE"
-             id="5a"
-             concept="DOB"
-             required="true"
-             question="Dat de Naissance"
-             answer="" />
-    </Page>
-    <Page>
-        <ShowIf>
-            <Criteria type="EQUALS" id="5" value="non"/>
-        </ShowIf>
-        <Element type="AGE"
-                 id="5b"
-                 concept="DOB"
-                 required="true"
-                 question="Antre nan laj pasyan an"
-                 answer="01-01-1990" />
-    </Page>
-	<!--
-	<Page>
+			question="Contraceptive Use Status"
+			choices="Yes,NO"
+			answer="NO"/>
 		<Element
-		    id="5"
-		    type="PICTURE"
-		    concept="IMAGE"
-		    question="Foto"/>
+			id="2"
+			concept="ANC STATUS"
+			type="RADIO"
+			required="true"
+			question="What is your Anenatal Care Status?"
+			choices="Yes,No"
+                                 help text = “Choose whether Girl has attended ANC before”
+			values="Yes,No"/>
 	</Page>
-	-->
+
+	<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="2" value="Yes"/>
+		</ShowIf>
+			<Element>
+				id="3"
+				concept="ANC SERVICES"
+				type="MULTI_SELECT"
+				required="true"
+				question="Services provided in ANC"
+                                           choices = “Pelvic Exam,Blood Pressure,Blood and Urine Tests”
+				answer=""/>
+	</Page>
+
+	<Page>
+		<Element>
+			id="4"
+			concept="NEXT ANC VISIT"
+			type="TEXT"
+			required="true"
+			question="Next ANC visit"
+			answer=""/>
+	
+	</Page>
+
+	<Page>
+		<Element>
+			id="5"
+			concept="LMD"
+			type="DATE"
+			required="true"
+			question="Last Menstruation Date"
+			answer=""
+		</Element>
+	</Page>
+<Page>
+		<ShowIf>
+			<Criteria type="EQUALS" id="5" value="Yes"/>
+		</ShowIf>
+			<Element>
+				id="6"
+				concept="EDD"
+				type="TEXT"
+				required="true"
+				question=""
+				answer=""/>
+	</Page>
+
+	<Page>
+		<Element>
+			id="7"
+			concept="SMS INTEREST"
+			type="RADIO"
+			required="true"
+			question="Interest in getting SMS"
+			choices="YES,NO"
+			answer="YES"
+		</Element>
+
+
+		<Element>
+			id="8"
+			concept="CUG STATUS"
+			type="RADIO"
+			required="true"
+			question="Do you want to receive follow up calls?"
+			choices="YES,NO"
+			answer="NO"
+</Element>
+	<Page>
+		<Element>
+			id="9"
+			concept="COMMENTS"
+			type="ENTRY"
+			required="true"
+			question="Any Comments"
+			answer=""
+		</Element>
+	</Page>	
 </Procedure>
