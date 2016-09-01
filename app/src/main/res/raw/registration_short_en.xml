@@ -16,43 +16,104 @@
                  concept="LOCATION"
                  question="Location"
                  default="29da1cb1-a8da-486d-80c8-0fbd4ee3f9ca:"/>
-        <Element id="1"
-                 type="ENTRY"
-                 concept="FAMILY NAME"
-                 required="true"
-                 question="Family name"/>
-        <Element id="2"
-            type="ENTRY"
-		    concept="GIVEN NAME"
-		    required="true"
-		    question="Given name"/>
+        <Element 
+			id="1" 
+			concept="GIVEN NAME" 
+			type="ENTRY" 
+			required="true" 
+			question="First Name" 
+			answer=""/>
+		<Element 
+			id="2" 
+			concept="SURNAME" 
+			type="ENTRY" 
+			required="true" 
+			question="Last Name" 
+			answer=""/>
+	
+		<Element 
+			id="3"
+			concept="DOB"
+			type="DATE"
+			required="true"
+			question="Date of Birth"
+			answer=""/>
+          </Page> 
 
-	</Page>
-	<Page>
-		<Element type="RADIO" id="3" concept="GENDER"
-				 question="Enter the patient gender:"
-				 required="true"
-				 helpText="Select the patient's gender."
-				 choices="M;F"
-				 values="M;F"
+            <Page>
+                        <Element 
+			id="4"
+			concept="AGE"
+			type="HIDDEN"
+			required="true"
+			question=""
+			answer=""/>
+           </Page> 
+
+           <Page>            
+                     <ShowIf>
+	<Criteria id="4" type="GREATER" value="24"/>
+</ShowIf>		
+<Element
+			id=”output2”
+			type=”TEXT”
+			concept="OLDER WOMAN"
 			/>
-	</Page>
-    <Page>
-        <Element
-            id="4"
-            type="DATE"
-            concept="DOB"
-            required="true"
-            question="Date of Birth"/>
-    </Page>
-	<!--
+                            
+          </Page>
+           <Page>            
+                     <ShowIf>
+	<Criteria id="4" type="LESS THAN" value="24"/>
+</ShowIf>		
+<Element
+			id=”output2”
+			type=”TEXT”
+			concept="GIRL IN AGE RANGE"
+			/>
+                       <Element
+			id=”output3”
+			type=”PROCEDURE”
+			concept="GIRL MEDICAL DATA"
+			/>
+
+                            
+          </Page>
+
 	<Page>
 		<Element
-		type="PICTURE"
-		id="5"
-		concept="IMAGE"
-		question="Take a picture of the patient."
-		answer=""/>
+			id="4"
+			concept="PHONE NUMBER"
+			type="ENTRY"
+			required="true"
+			question="Girl's Phone Number"
+			answer=""/>
+		<Element
+			id="5"
+			concept="POWER HOLDERS NUMBER"
+			type="ENTRY"
+			required="true"
+			question="PowerHolder's Number"
+			answer=""/>
+				
+	                <Element
+
+			concept="MARITAL STATUS"
+			type="SELECT"
+			required="true"
+			question="Martial Status"
+			choices="SINGLE,MARRIED,DIVORCED"
+			answer=""/>
 	</Page>
-	-->
+
+	<Page>
+		<Element
+			id="9"
+			concept="EDUCATION LEVEL"
+			type="SELECT"
+			required="true"
+			question="Highest Education Level"
+			choices="Primary_level,O-Level,A-level"
+			answer=""/>
+         </Page>
+
 </Procedure>
