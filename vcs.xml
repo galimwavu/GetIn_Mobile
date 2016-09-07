@@ -14,6 +14,10 @@
           <option name="url" value="https://github.com/UNFPAInnovation/GetIn_Mobile.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/galimwavu/GetIn_Mobile.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\acer\AndroidStudioProjects" />
