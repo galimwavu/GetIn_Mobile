@@ -35,6 +35,8 @@
     <string name="button_main_select_patient">Select Patient</string>
     <string name="button_main_training_mode">Practice</string>
     <string name="button_configure">Configure</string>
+    <string name="button_main_view_mapped_girls">View Mapped Girls</string>
+    <string name="button_main_map_girl">Map Girl</string>
 
     <!--  General Phrases -->
     <string name="general_ok">Okay</string>
