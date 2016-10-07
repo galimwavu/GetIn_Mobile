@@ -22,6 +22,10 @@
           <option name="url" value="https://github.com/UNFPAInnovation/GetIn_Mobile" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/SanaMobile/sana.mobile-pgssc" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\acer\AndroidStudioProjects" />
