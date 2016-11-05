@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project 'Booking_app'" />
-    <option name="defaultScopeName" value="Project 'Booking_app'" />
-    <option name="SEARCH_SCOPE" value="Project 'Booking_app'" />
+    <option name="customScope" value="File 'C:\Users\acer\Desktop\TabFragment\app\src\main\java\com\example\marting\tabfragment\MainActivity.java'" />
+    <option name="defaultScopeName" value="File 'C:\Users\acer\Desktop\TabFragment\app\src\main\java\com\example\marting\tabfragment\MainActivity.java'" />
+    <option name="SEARCH_SCOPE" value="File 'C:\Users\acer\Desktop\TabFragment\app\src\main\java\com\example\marting\tabfragment\MainActivity.java'" />
   </component>
 </application>
